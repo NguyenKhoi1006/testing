@@ -1,0 +1,216 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Comfortaa:wght@300..700&family=Lexend:wght@100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  --hue: 14;
+  --first-color: hsl(var(--hue), 91%, 54%);
+  --first-color-alt: hsl(var(--hue), 91%, 50%);
+  --title-color: hsl(0, 0%, 0%);
+  --text-color: hsl(0, 4%, 18%);
+  --text-color-light: hsl(var(--hue), 4%, 55%);
+
+  /* Green gradient */
+  --body-color: linear-gradient( hsla(0, 0%, 100%, 0) 0%, 	hsl(218, 100%, 14%) 100%);
+  --container-color: linear-gradient(136deg, hsla(224, 95%, 32%, 0.8) 0%, hsla(224, 95%, 32%, 0.8) 100%);
+
+  /* Font and typography */
+  --body-font: 'Comfortaa', sans-serif;
+  --biggest-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /* Font weight */
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-black: 900;
+
+  /* Margins */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+
+  /* z-index */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*=============== BASE ===============*/
+html{
+  scroll-behavior: smooth;
+}
+
+/*=================HOVER================*/
+.show_more:hover {
+  transform: scale(1.2);
+}
+.btn:hover{
+  transform: translateY(-.5rem);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.tle:hover{
+  color:#0e1abb;
+  transform: translateY(-.5rem);
+}
+
+
+/*=============== FOOTER ===============*/
+.footer {
+  background-color: #f2f2f2;
+  padding: 2rem 0;
+  border-top: 3px solid;
+  
+  position: relative;
+  overflow: hidden;
+  font-family: var(--body-font);
+}
+
+.footer__container {
+  display: flex;
+  
+  flex-wrap: wrap;
+  
+  margin: 0 auto;
+  
+  
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  column-gap: 0rem;
+}
+
+.footer__content {
+  flex: 1 1 20px;
+  
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: var(--mb-1);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+}
+
+.footer__logo-img,
+.footer__slogan-img {
+  height: 50px;
+}
+
+.footer__description {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.footer__title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: var(--mb-1);
+}
+
+.footer__links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__links li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.footer__link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+  transition: color 0.3s;
+}
+
+.footer__link:hover {
+  color: #0e1abb;
+}
+
+.footer__social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.footer__social-link {
+  color: #0e1abb;
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.footer__social-link:hover {
+  transform: scale(1.2);
+}
+
+.footer__copy {
+  display: block;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: var(--smaller-font-size);
+  color: #666;
+}
+
+.footer__img-one,
+.footer__img-two {
+  position: absolute;
+  transition: .3s;
+}
+
+.footer__img-one {
+  width: 100px;
+  top: 6rem;
+  right: -2rem;
+}
+
+.footer__img-two {
+  width: 150px;
+  bottom: 4rem;
+  right: 4rem;
+}
+
+.footer__img-one:hover,
+.footer__img-two:hover {
+  transform: translateY(-.5rem);
+}
+
+
+
+/*=============== ADDITIONAL SCROLL BAR STYLING ===============*/
+
+::-webkit-scrollbar {
+display: none;
+}
+  
+body {
+  scrollbar-width: none; /* Đặt chiều rộng của thanh cuộn là 0 */
+  -ms-overflow-style: none; /* Ẩn thanh cuộn trên Internet Explorer và Edge cũ */
+  scroll-behavior: smooth;
+ }
+  
+
+/*=============== KEYFRAMES ===============*/
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }   
+}
